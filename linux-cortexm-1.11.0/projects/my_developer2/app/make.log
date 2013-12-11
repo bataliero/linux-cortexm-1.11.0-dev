@@ -1,0 +1,29 @@
+make -C /rcu2/release/linux-cortexm-1.11.0/linux M=`pwd` modules CFLAGS="" LDFLAGS=""
+make[1]: ディレクトリ `/rcu2/release/linux-cortexm-1.11.0/linux' に入ります
+  Building modules, stage 2.
+  MODPOST 1 modules
+WARNING: "param_get_int" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "param_set_int" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "param_get_uint" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "param_set_uint" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "__register_chrdev" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "strncpy" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "strlen" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "__unregister_chrdev" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+WARNING: "printk" [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.ko] undefined!
+  CC      /rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.o
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:8: error: variable '__this_module' has initializer but incomplete type
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:9: error: unknown field 'name' specified in initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:9: warning: excess elements in struct initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:9: warning: (near initialization for '__this_module')
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:10: error: unknown field 'init' specified in initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:10: warning: excess elements in struct initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:10: warning: (near initialization for '__this_module')
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:14: error: unknown field 'arch' specified in initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:14: error: 'MODULE_ARCH_INIT' undeclared here (not in a function)
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:14: warning: excess elements in struct initializer
+/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.c:14: warning: (near initialization for '__this_module')
+make[2]: *** [/rcu2/release/linux-cortexm-1.11.0/projects/developer/app/sample.mod.o] エラー 1
+make[1]: *** [modules] エラー 2
+make[1]: ディレクトリ `/rcu2/release/linux-cortexm-1.11.0/linux' から出ます
+make: *** [modules] エラー 2
